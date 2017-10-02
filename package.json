@@ -1,0 +1,20 @@
+{
+  "name": "automated-test-suite",
+  "version": "1.0.0",
+  "description": "Automated test suite for web applications",
+  "main": "index.js",
+  "scripts": {
+    "setup": ".\\processes\\start-chrome-headless.bat",
+    "teardown": ".\\processes\\stop-chrome-headless.bat",
+    "tape": "./node_modules/.bin/tape src/test/**/*.js",
+    "test": "npm run setup && npm run tape && npm run teardown",
+    "lint": "eslint public/elements --ext .html,.js --format html -o test-output/eslint.html '$@' || true;",
+    "lint-fix": "eslint public/elements --ext .html,.js --fix --format html -o test-output/eslint.html '$@' || true"
+  },
+  "author": "cesar.gonzalez@softtek.com",
+  "license": "STK",
+  "dependencies": {
+    "chromeless": "^1.1.0",
+    "tape": "^4.8.0"
+  }
+}
