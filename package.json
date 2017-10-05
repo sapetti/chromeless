@@ -11,8 +11,8 @@
     "lint": "eslint public/elements --ext .html,.js --format html -o test-output/eslint.html '$@' || true;",
     "lint-fix": "eslint public/elements --ext .html,.js --fix --format html -o test-output/eslint.html '$@' || true"
   },
-  "author": "cesar.gonzalez@softtek.com",
-  "license": "STK",
+  "author": "Cesar Sapetti",
+  "license": "MIT",
   "dependencies": {
     "chromeless": "^1.1.0",
     "tape": "^4.8.0"
